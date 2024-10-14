@@ -1,6 +1,7 @@
 html{
-    font-family: Arial, Helvetica, sans-serif;
-    color: rgb(20, 54, 82);
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(20, 54, 82);
+  background-color: rgb(220, 234, 242);
 }
 
 header{
@@ -20,29 +21,52 @@ header{
 }
 
 h1 {
-    font-size: 58px;
-    margin: 10px 0px;
+  font-size: 58px;
+  margin: 10px 0px;
 }
 
 h2 {
-    margin: 0;
+  margin: 10px 0;
 }
 
 button{
-    border: none;
-    color: rgb(20, 54, 82);
-    background-color: white;
-    display: block;
-    margin: 10px 5px; /* Adds some space between the buttons */
-    width: 100%; /* Optional: You can control the width to fit your design */
-    text-align: left; /* Aligns the text inside the button to the left */
-    padding: 0;
+  border: none;
+  color: rgb(20, 54, 82);
+  background-color: rgb(220, 234, 242);
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 10px;
+  margin-right: 7px;
+  width: auto;
+  padding: 5px;
+  margin: 5px 0; /* Space between buttons */
+  text-align: left;
+  display: block; /* Ensures each button is on a new line */
+}
+button:hover {
+  border-color: rgb(20, 54, 82);
 }
 body {
-    padding-top: 205px;
+  padding-top: 205px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Ensures the body takes up the full height of the viewport */
+  margin: 0;
 }
 
 .quizbox {
-    border: 2px solid black;
-    padding: 5px;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid black;
+  border-radius: 20px;
+  margin: 10px 0;
+  width: 650px;
+  padding: 5px 0px;
+  /* text-align: center; /* Center the h2 text */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the buttons and other content */
+}
+
+.question {
+  width: 600px;
 }
