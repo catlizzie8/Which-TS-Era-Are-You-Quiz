@@ -20,9 +20,34 @@ header{
   padding: 5px;
 }
 
+body {
+  padding-top: 205px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Ensures the body takes up the full height of the viewport */
+  margin: 0;
+}
+  
+.quizbox {
+  background-color: rgb(255, 255, 255);
+  border: 2px solid black;
+  border-radius: 20px;
+  margin: 10px 0;
+  width: 650px;
+  padding: 5px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the buttons and other content */
+}
+  
+.question {
+  width: 600px;
+}
+
 h1 {
   font-size: 58px;
-  margin: 10px 0px;
+  margin: 10px 3px;
 }
 
 h2 {
@@ -45,28 +70,89 @@ button{
 button:hover {
   border-color: rgb(20, 54, 82);
 }
-body {
-  padding-top: 205px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh; /* Ensures the body takes up the full height of the viewport */
-  margin: 0;
+.submit {
+  background-color: white;
+  border-color: rgb(20, 54, 82);
+  font-weight: bold;
+  font-size: 15px;
+}
+.submit:hover {
+  background-color: rgb(220, 234, 242);
 }
 
-.quizbox {
-  background-color: rgb(255, 255, 255);
-  border: 2px solid black;
-  border-radius: 20px;
-  margin: 10px 0;
-  width: 650px;
-  padding: 5px 0px;
-  /* text-align: center; /* Center the h2 text */
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Center the buttons and other content */
+img {
+  height: 300px;
+  padding: 3px;
+}
+.horizontal {
+    height: 200px;
 }
 
-.question {
-  width: 600px;
+@media (max-width: 915px) {
+  h1 {
+    font-size: 48px;
+  }
+  h2 {
+    font-size: 21px;
+  }
+  button {
+    font-size: 12px;
+  }
 }
+@media (max-width: 770px) {
+    h1 {
+      font-size: 40px;
+    }
+    h2 {
+      font-size: 18px;
+    }
+    button {
+      font-size: 11px;
+    }
+    .quizbox {
+      width: 500px;
+    }
+    .question {
+      width: 450px;
+    }
+    img {
+      height: 275px;
+    }
+    .horizontal {
+      height: 175px;
+    }
+    .submit {
+      font-size: 13px;
+    }
+  }
+
+  @media (max-width: 540px) {
+    h1 {
+      font-size: 36px;
+    }
+    h2 {
+      font-size: 16px;
+    }
+    button {
+      font-size: 11px;
+    }
+    .quizbox {
+      width: 100%;
+      padding: 5px 30px;
+    }
+    .question {
+      width: 100%;
+    }
+    img {
+      height: 275px;
+    }
+    .horizontal {
+      height: 175px;
+    }
+    .submit {
+      font-size: 13px;
+    }
+    body {
+      padding: 205px 10px 0;
+    }
+  }
