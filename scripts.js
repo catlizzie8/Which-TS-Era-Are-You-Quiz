@@ -1,27 +1,37 @@
-// Select all button elements on the page
-const buttons = document.querySelectorAll('button');
-console.log("hi")
-// Loop through each button and attach the event listener
-buttons.forEach(button => {
-  button.addEventListener('click', function() {
-    console.log('Button clicked!');
-  });
-});
-document.querySelectorAll('.question').forEach(question => {
+// Add event listeners to all buttons in the quiz
+document.querySelectorAll('.question').forEach((question, index, allQuestions) => {
   question.addEventListener('click', function(e) {
     if (e.target.tagName === 'BUTTON') {
       // Reset all buttons in the current question div to the default border color
       question.querySelectorAll('button').forEach(button => {
-        button.style.borderColor = 'rgb(255, 255, 255)'; // Reset border color
+        button.style.borderColor = 'rgb(255, 255, 255)'; // Reset border color to default
       });
 
-      // Toggle the border color of the clicked button
-      const currentColor = e.target.style.borderColor;
-      if (currentColor === 'black') {
-        e.target.style.borderColor = 'rgb(220, 234, 242)'; // Back to original color
-      } else {
-        e.target.style.borderColor = 'black'; // Set border to black when clicked
+      // Toggle the clicked button's border color between black and the default color
+      e.target.style.borderColor = e.target.style.borderColor === 'black' ? 'rgb(220, 234, 242)' : 'black';
+
+      // Scroll to the next question if it exists
+      const nextQuestion = allQuestions[index + 1];
+      if (nextQuestion) {
+        // Get the header's height to calculate the offset
+        const headerHeight = document.querySelector('header').offsetHeight;
+
+        // Scroll to the next question, adjusting for the header height
+        window.scrollTo({
+          top: nextQuestion.offsetTop - headerHeight,
+          behavior: 'smooth'
+        });
       }
     }
   });
 });
+
+// Function to hide results
+function hideResults() {
+  document.querySelector('.results').style.display = 'none';
+}
+
+// Function to show results
+function showResults() {
+  document.querySelector('.results').style.display = 'flex';
+}

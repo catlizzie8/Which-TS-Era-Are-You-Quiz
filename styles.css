@@ -94,8 +94,7 @@ img {
   align-items: center; /* Center them horizontally */
   text-align: center; /* Center the text inside each item */
   margin: 20px 0; /* Optional: Add spacing around the results */
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 0 20px;
 }
 
 .results img {
@@ -169,5 +168,14 @@ img {
     }
     body {
       padding: 205px 10px 0;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .quizbox {
+      border: none;
+    }
+    body {
+      background-color: white;
     }
   }
