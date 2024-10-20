@@ -94,6 +94,8 @@ img {
   align-items: center; /* Center them horizontally */
   text-align: center; /* Center the text inside each item */
   margin: 20px 0; /* Optional: Add spacing around the results */
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .results img {
