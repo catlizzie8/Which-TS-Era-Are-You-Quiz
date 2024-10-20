@@ -153,6 +153,7 @@ img {
     .quizbox {
       width: 100%;
       padding: 5px 30px;
+      border: none;
     }
     .question {
       width: 100%;
@@ -168,14 +169,6 @@ img {
     }
     body {
       padding: 205px 10px 0;
-    }
-  }
-
-  @media (max-width: 400px) {
-    .quizbox {
-      border: none;
-    }
-    body {
       background-color: white;
     }
   }
